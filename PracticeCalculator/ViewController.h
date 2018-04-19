@@ -8,8 +8,25 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController {
+    bool operatorPressed;
+    int op; // operator
+    
+    NSString *firstEntry;
+    NSString *secondEntry;
+}
 
+@property (weak, nonatomic) IBOutlet UILabel *labelOutput;
+
+
+- (IBAction)clearPressed:(id)sender;
+- (IBAction)addPressed:(id)sender;
+- (IBAction)subtractPressed:(id)sender;
+- (IBAction)multiplyPressed:(id)sender;
+- (IBAction)dividePressed:(id)sender;
+- (IBAction)equalPressed:(id)sender;
+
+- (IBAction)numberPressed:(UIButton*)sender;
 
 @end
 
